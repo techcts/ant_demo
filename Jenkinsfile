@@ -1,10 +1,13 @@
 pipeline {
-  agent any
+  agent none
   stages {
     stage('checkout') {
       steps {
         node(label: 'any')
       }
     }
+  }
+  environment {
+    build = 'ant'
   }
 }
